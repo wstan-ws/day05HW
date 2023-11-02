@@ -36,9 +36,20 @@ public class Cards {
         System.out.printf("Top Card Drawn: %s\n", deck.get(0));
     }
 
+    public void discardTopCard() {
+        System.out.printf("Top Card Drawn: %s\n", deck.get(0));
+        deck.remove(0);
+    }
+
     public void drawRandomCard() {
         int index = (int)(Math.random() * deck.size());
         System.out.printf("Random Card Drawn: %s\n", deck.get(index));
+    }
+
+    public void discardRandomCard() {
+        int index = (int)(Math.random() * deck.size());
+        System.out.printf("Random Card Drawn: %s\n", deck.get(index));
+        deck.remove(index);
     }
 
     public int getDeckSize() {
